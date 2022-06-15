@@ -1,0 +1,148 @@
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{text-decoration: underline;}
+.head{
+    width: 1600px;
+    background-color: #af251b;
+    display: flex;
+    align-items:center;
+}
+.schoolLogo{
+    display: inline-block;
+    margin-left: 15px;
+    /*animation (动画) :绑定选择器, 4s完成动画 linear(匀速) infinite(循环) */
+    animation: loading 10s linear infinite;
+}
+/*通过@keyframes规则,能够创建动画 , que 定义动画的名称 可自己定义*/
+@keyframes loading {
+    /*以百分比来规定改变发生的时间 也可以通过"from"和"to",等价于0% 和 100%*/
+    0% {
+        /*rotate(2D旋转) scale(放大或者缩小) translate(移动) skew(翻转)*/
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.schoolName{
+    display: inline-block;
+}
+.schoolRule{
+    display: inline-block;
+}
+.schoolLogo img{
+    width: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.schoolName img{
+    width: 400px;
+}
+.schoolRule img{
+    display: block;
+    width: 400px;
+    margin-left: 640px;
+}
+.schoolBackground{
+    position: absolute;
+    width: 400px;
+    left: 580px;
+    top: 40px;
+}
+
+.navigation{
+    display: grid;
+    width: 1600px;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+    background-color: #7b0002;
+    color: white;
+    font-family: FangSong;
+    font-size: 30px;
+}
+.navigation div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.introduction{
+    font-size: 40px;
+    width: 1600px;
+    background-color: #efefef;
+    text-align: center;
+}
+.mainInfo{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    column-gap: 20px;
+    width: 1600px;
+    background-color: #efefef;
+}
+.main{
+    width: 1600px;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:0 auto;
+}
+
+.description{
+    margin-top: 20px;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.area{
+    margin-left: 30px;
+    font-size: 35px;
+    margin-top: 30px;
+}
+.areaAdj{
+    text-align: right;
+    margin-right: 40px;
+    position: relative;
+    top: 400px;
+    right: 20px;
+    font-size: 40px;
+}
+
+/* 轮播图样式设置 */
+.slide_box{
+    text-align: center;
+}
+
+.slide_box .bd li{ 
+    display: flex;
+	vertical-align:middle;
+    flex-direction:row;
+    align-items: center;
+}
+
+/* 切换照片圆点 */
+.hd ul{
+    position: relative;
+    bottom: 50px;
+    left:36.5%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.hd ul li{
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.hd ul li.on{
+    background-color: #fff;
+}
